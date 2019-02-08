@@ -3,4 +3,4 @@
 - '/'	   - Homepage
 - '/:id' - User
 - '/following' -
-- '/ 
+-  
