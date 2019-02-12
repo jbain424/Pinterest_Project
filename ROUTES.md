@@ -16,8 +16,8 @@
 * **Navbar**
 * **Home**
 * **Users**
- - user.js
- - userDisplay.js
+  - user.js
+  - userDisplay.js
 * **Boards**
   - board.js
   - boardDisplay.js
