@@ -24,7 +24,7 @@
 * creates new pin
 
 **Get**
-/api/pins/:id
+/api/pins/
 * gets single pin
 
 **Delete**
@@ -37,13 +37,13 @@
 * creates new board
 
 **Get**
-/api/boards/:user_id
+/api/boards/:board_id
 * gets board from single user
 
 **Patch**
-/api/boards/:user_id
+/api/boards/:board_id
 * updates board from single user
 
 **Delete**
-/api/boards/:user_id
+/api/boards/:board_id
 * deletes board from single user
