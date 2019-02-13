@@ -28,7 +28,7 @@
 * gets single pin
 
 **Get**
-/api/:id/pins
+/api/users/:id/pins
 * gets all pins from single user
 
 **Delete**
