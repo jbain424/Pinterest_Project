@@ -18,13 +18,21 @@
 
 # Implementation Timeline
 
-## **Setup Backend** (1 day)
-1. Build seed and schema
+## **Backend: Pins** (1 day)
+1. Create tables for users and pins
 2. Set up Routes to view on homepage
+3. import images in seed to view on homepage
 
-## **Frontend: Homepage** (3 days)
+## **Frontend: Homepage & Users** (3 days)
 1. Navbar, View 'pins' on homepage
-2. Style homepage using CSS
+2. Set up user profile page to link for user pins and  boards
+3. Build Users component
+4. Style homepage using CSS
+5. Import Google fonts
 
-## **Backend: Boards** (2 days)
-1. Set up Routes
+## **Backend: Boards** (3 days)
+1. Update seed with board info
+2. Build routes to get all pins for specific boards and link to user profile page
+
+## **Frontend: Boards** (3 days)
+1. Build board component
