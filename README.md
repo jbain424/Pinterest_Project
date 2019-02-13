@@ -18,9 +18,13 @@
 
 # Implementation Timeline
 
-## **Setup Backend** (<1 day)
-1. Set up Routes to view on homepage
+## **Setup Backend** (1 day)
+1. Build seed and schema
+2. Set up Routes to view on homepage
 
 ## **Frontend: Homepage** (3 days)
 1. Navbar, View 'pins' on homepage
 2. Style homepage using CSS
+
+## **Backend: Boards** (2 days)
+1. Set up Routes
