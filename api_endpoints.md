@@ -20,16 +20,24 @@
 
 ## **Pins**
 **Post**
-/api/pins/:user_id
+/api/pins/
 * creates new pin
 
 **Get**
 /api/pins/
 * gets single pin
 
+**Get**
+/api/:id/pins
+* gets all pins from single user
+
 **Delete**
 /api/pins/:id
 * deletes single pin
+
+**Patch**
+/api/pins/:id
+* edits pin
 
 ## **Boards**
 **Post**
@@ -39,6 +47,10 @@
 **Get**
 /api/boards/:board_id
 * gets board from single user
+
+**Get**
+/api/:id/boards
+* gets all boards from single user
 
 **Patch**
 /api/boards/:board_id
