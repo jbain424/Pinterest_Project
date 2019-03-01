@@ -10,6 +10,10 @@
 /api/users/:user_id
  - gets single user
 
+ **Get**
+ /api/users/
+ - get all users
+
 **Patch**
 /api/users/:user_id
  - updates user information
