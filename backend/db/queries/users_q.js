@@ -15,8 +15,9 @@ const getAllUsers = (req, res, next) => {
 }
 
 const getOneUser = (req, res, next) => {
-  let userId = parseInt(req.params.id)
-  db.one('SELECT * FROM username WHERE id=$1', userId)
+  let username = req.params.username
+  console.log(req.params);
+  db.one('SELECT * FROM username WHERE username.username=$1', username)
   .then(data => {
     res.status(200)
     .json({
@@ -25,7 +26,9 @@ const getOneUser = (req, res, next) => {
       message: 'Got ONE User!'
     })
   })
-  .catch(err => next(err))
+  .catch(err => {
+    next(err)
+  })
 };
 
 

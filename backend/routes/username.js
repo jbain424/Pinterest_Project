@@ -10,7 +10,7 @@ router.get('/logout', loginRequired, logoutUser);
 router.get('/isLoggedIn', isLoggedIn)
 
 router.get('/', getAllUsers);
-router.get('/:id', getOneUser);
+router.get('/:username', getOneUser);
 router.post('/', addOneUser);
 router.patch('/:id', updateOneUser);
 router.delete('/:id', deleteOneUser);

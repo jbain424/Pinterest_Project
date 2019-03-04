@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import '../css/UserPins.css'
+import '../../css/UserPins.css'
 
 class UserPins extends React.Component {
   constructor() {

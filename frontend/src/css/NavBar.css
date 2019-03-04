@@ -2,28 +2,25 @@ body {
   background-color: white;
 }
 .navbar {
-  font-family: 'helvetica neue', sans-serif;
+  font-family: "helvetica neue", sans-serif;
   font-size: 16px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: white;
   width: 100%;
   height: 75px;
-  border-bottom: #efefef solid 1px
-
+  border-bottom: #efefef solid 1px;
 }
 
-.leftNav  {
+.leftNav {
   display: inline-flex;
   background-color: white;
-
 }
 
 .leftNav :link {
   text-decoration: none;
   background-color: white;
   border-style: none;
-
 }
 
 .rightNav {
@@ -35,7 +32,6 @@ body {
   padding-top: 25px;
   padding-left: 10px;
   background-color: white;
-
 }
 
 .rightNav :link {
@@ -44,43 +40,34 @@ body {
   border-radius: 20px;
   border-style: none;
   display: flex;
-  padding: 8px 8px 8px 8px
-
+  padding: 8px 8px 8px 8px;
 }
 
 .homelogo {
-  padding-right: 20px;
   border-style: none;
-  padding-left: 20px;
   background-color: white;
-  padding-top: 20px;
+  padding: 20px 20px 0px 20px;
 }
 
-.homelogo a:hover{
+.homelogo a:hover {
   /* background-color: #efefef;
   border-radius: 80%;
   border-style: none; */
 }
 
-
-.navbar a:hover{
+.navbar a:hover {
   background-color: #efefef;
   border-radius: 20px;
   border-style: none;
-
 }
 
-
-.navbar a:visited{
+.navbar a:visited {
   color: #929292;
-
 }
 .navbar a:active {
   color: black;
   background-color: #efefef;
 }
-
-
 
 .magGlass {
   background-color: #efefef;
@@ -89,12 +76,11 @@ body {
   width: auto;
   height: 41px;
   margin-top: 20px;
-  padding-left: 8px
-
+  padding-left: 8px;
 }
 
 .searchBar {
-  width: 695px;
+  width: 750px;
   height: 25px;
   padding: 8px;
   margin-bottom: 5px;
@@ -105,5 +91,5 @@ body {
   border-style: none;
   font-weight: bold;
   margin-top: 20px;
-
+  justify-content: flex-start;
 }
