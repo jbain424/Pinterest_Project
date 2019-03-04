@@ -14,10 +14,14 @@ class App extends Component {
     super(props);
     this.state = {
       user: {},
-      boards: []
+      boards: [],
+      isLoggedin: false
+
+
     };
   }
 
+  
   setUser = (user) => {
     this.setState({
       user: user
@@ -31,7 +35,7 @@ class App extends Component {
         <NavBar />
         <Switch>
           <Route exact path="/" component={Home}/>
-          <Route path={"/:username"} render={(routeProps)=> {
+          <Route path={"/username/:username"} render={(routeProps)=> {
               return <User user={this.state.user} {...routeProps} setUser={this.setUser}/>
             }}/>
         </Switch>

@@ -7,9 +7,8 @@ import UserProfile from "./UserProfile.js";
 import Boards from "../Boards.js";
 
 export class User extends React.Component {
-
-  componentDidMount(){
-    this.getUser()
+  componentDidMount() {
+    this.getUser();
   }
 
   getUser = () => {
@@ -19,6 +18,7 @@ export class User extends React.Component {
         this.props.setUser(response.data.data);
       })
       .catch(err => {
+        // debugger
         console.log(err);
       });
   };
@@ -26,7 +26,6 @@ export class User extends React.Component {
     return (
       <>
         <UserProfile user={this.props.user} />
-
         <Route path="/username/:id/pins" component={UserPins} />
         <Route path="/username/:id/boards" component={Boards} />
       </>

@@ -15,10 +15,11 @@ const getAllUsers = (req, res, next) => {
 }
 
 const getOneUser = (req, res, next) => {
-  let username = req.params.username
+  let usersname = req.params.username
   console.log(req.params);
-  db.one('SELECT * FROM username WHERE username.username=$1', username)
+  db.one('SELECT * FROM username WHERE username.username=$1', usersname)
   .then(data => {
+    console.log(data);
     res.status(200)
     .json({
       status: 'success',
