@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 class Home extends React.Component {
   state = {
     pins: [],
+    onePin: ""
   };
 
   componentDidMount() {
@@ -14,7 +15,8 @@ class Home extends React.Component {
       .get("/pins")
       .then(response => {
         this.setState({
-          pins: response.data.data
+          pins: response.data.data,
+          onePin: response.data.data
         });
       })
       .catch(err => {
@@ -23,12 +25,11 @@ class Home extends React.Component {
   }
 
   render() {
-    const { pins } = this.state;
+    const { pins, onePin } = this.state;
     return (
       <div>
         <PinList pins={pins} />
-        <Link to={"/pins/" + pins.id}>
-          <img src={pins.pin_url} alt="" className="singlePin" />
+        <Link to={"/pins/" + onePin.id}><img src={onePin.pin_url} alt="" className="singlePin"/>
         </Link>
       </div>
     );

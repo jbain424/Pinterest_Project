@@ -1,42 +1,32 @@
-#pinBackground {
-  background-image: linear-gradient(#eeeeee, white);
-}
+
 
 .container {
+  border: 100px;
   background-color: white;
   width: 400px;
   height: 400px;
 }
 
-.pinContainer {
+.allThings {
   font-family: helvetica neue;
   display: grid;
   grid-template-columns: 70% 30%;
-  grid-template-rows: 5% 5% 5% 75%;
-  align-content: center;
-  background-color: white;
+  grid-template-rows: 5% 5% 5% 80%;
   padding-left: 200px;
   padding-top: 300px;
   padding-right: 200px;
-  background: white;
 }
 
 .pinImg {
   grid-column: 1;
   border-radius: 10px;
-}
-
-#img {
-  border-radius: 8px;
   box-sizing: border-box;
-
 }
 
 /* #whitebox {
   background-color: white;
   width: 500px;
   height: 500px;
-
 } */
 
 .pinName {
@@ -49,19 +39,53 @@
   grid-column: 2 / 2;
 }
 
-.psAndComs {
-  grid-column: 2 / 3;
-  font-size: 20px;
-  font-weight: bold;
-}
+
 
 #input {
   width: 300px;
-  height: 500px;
+  height: 200px;
   align-content: flex-start;
   border-style: 1px;
+
 }
 .pinComment {
   grid-column: 2 / 4;
   width: 300px;
+}
+
+.psAndComs {
+  align-content: space-between;
+  font-family: helvetica neue;
+  font-weight: bold;
+  color: #efefef;
+  grid-column: 2 / 3;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.psAndComs a:link {
+  text-decoration: none;
+  background-color: white;
+  border-radius: 20px;
+  border-style: none;
+  padding: 10px 10px 10px 10px;
+  color: black;
+}
+
+.psAndComs a:hover {
+  text-decoration: underline;
+  border-radius: 20px;
+  border-style: none;
+  background-color: #efefef;
+  color: black;
+}
+
+.psAndComs a:visited {
+  color: #929292;
+}
+
+.psAndComs a:active {
+  color: black;
+  padding: 10px 10px 10px 10px;
+  background-color: #efefef;
 }

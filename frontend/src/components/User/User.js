@@ -5,7 +5,7 @@ import { Route } from "react-router-dom";
 import UserPins from "./UserPins.js";
 import UserProfile from "./UserProfile.js";
 import Boards from "../Boards.js";
-import NavMenu from "../Nav/NavMenu.js"
+import NavMenu from "../Nav/NavMenu"
 
 export class User extends React.Component {
   componentDidMount() {
