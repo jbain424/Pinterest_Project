@@ -13,7 +13,7 @@ body {
 }
 
 .leftNav {
-  display: flex; 
+  display: flex;
   background-color: white;
 }
 
@@ -25,48 +25,37 @@ body {
 
 .rightNav {
   display: flex;
-  justify-content:flex-start;
-  width: 300px;
+  justify-content: flex-start;
+  width: 350px;
   font-weight: bold;
   vertical-align: top;
-  padding-top: 25px;
+  padding-top: 20px;
   padding-left: 10px;
   background-color: white;
 }
 
-.rightNav :link {
+.rightNav a:link {
+  display: flex;
   text-decoration: none;
   background-color: white;
   border-radius: 20px;
   border-style: none;
-  display: flex;
-  padding: 8px 8px 8px 8px;
+  padding: 10px 10px 10px 10px;
+}
+
+.rightNav a:hover {
+  padding: 10px 10px 10px 10px;
+  background-color: #efefef;
+}
+
+.rightNav a:visited {
+  color: #929292;
 }
 
 .homelogo {
   border-style: none;
   background-color: white;
   padding: 20px 20px 0px 20px;
-}
-
-.homelogo a:hover {
-  /* background-color: #efefef;
-  border-radius: 80%;
-  border-style: none; */
-}
-
-.navbar a:hover {
-  background-color: #efefef;
-  border-radius: 20px;
-  border-style: none;
-}
-
-.navbar a:visited {
-  color: #929292;
-}
-.navbar a:active {
-  color: black;
-  background-color: #efefef;
 }
 
 .magGlass {

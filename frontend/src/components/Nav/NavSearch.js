@@ -1,9 +1,6 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 
-
-let magGlass = require('../../assets/magnifying_glass copy.png')
-
+let magGlass = require("../../assets/magnifying_glass copy.png");
 
 export const NavSearch = () => {
   return (

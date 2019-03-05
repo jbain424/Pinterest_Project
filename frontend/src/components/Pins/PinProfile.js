@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import "../css/Pins.css";
+import "../../css/SinglePin.css";
 
 class PinProfile extends React.Component {
   constructor(props) {
@@ -12,8 +12,9 @@ class PinProfile extends React.Component {
 
   componentDidMount() {
     axios
-      .get("/pins/" + this.props.match.params.username)
+      .get("/pins/" + this.props.match.params.id)
       .then(response => {
+        debugger
         this.setState({
           onePin: response.data.data
         });
@@ -26,26 +27,21 @@ class PinProfile extends React.Component {
   render() {
     return (
       <>
-        <div id="whitebox">
+        <div id="container">
           <div className="pinContainer" id="pinBackground">
             <div id="pinImg">
               <img
-                id="img"
                 src={this.state.onePin.pin_url}
                 alt=""
                 width="500px"
                 height="auto"
+                id="img"
               />
             </div>
 
             <div className="pinName">{this.state.onePin.pin_name}</div>
 
             <div className="pinCaption">{this.state.onePin.pin_caption}</div>
-
-            <div id="hairline">
-              {" "}
-              <hr />{" "}
-            </div>
 
             <div className="psAndComs">
               <h2>Photos and Comments</h2>

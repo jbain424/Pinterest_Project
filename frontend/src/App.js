@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-import "./css/NavBar.css";
-import { matchPath } from "react-router";
 
 import { NavBar } from "./components/Nav/NavBar.js";
 import Home from "./components/Home.js";
 import { User } from "./components/User/User.js";
-import PinProfile from "./components/PinProfile.js";
+import PinProfile from "./components/Pins/PinProfile.js";
+import CreatePin  from "./components/Pins/CreatePin.js";
+
+import "./css/NavBar.css";
 
 class App extends Component {
   constructor(props) {
@@ -32,6 +33,8 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
 
+          <Route path={"/pins/:id"} component={PinProfile} />
+
           <Route
             path={"/username/:id"}
             render={routeProps => {
@@ -44,7 +47,7 @@ class App extends Component {
               );
             }}
           />
-          <Route path={"/pins/:id"} component={PinProfile} />
+        <Route path={"/new"} component={CreatePin}/>
         </Switch>
       </div>
     );

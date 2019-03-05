@@ -7,16 +7,15 @@ let pencil = require("../../assets/pencil.png");
 let share = require("../../assets/share.png");
 
 export const UserProfile = props => {
-
   return (
     <>
       <div className="userContainer">
         <span className="buttons">
-          <Link to={"/"}>
+          <Link to={"/new/"}>
             <img className="createPin" alt="logo" src={plus} />
           </Link>
 
-          <Link to={"/pins/"}>
+          <Link to={"/edit/"}>
             <img className="editPin" alt="logo" src={pencil} />
           </Link>
 

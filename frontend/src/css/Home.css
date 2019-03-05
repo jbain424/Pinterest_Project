@@ -5,6 +5,7 @@
   padding-left: 100px;
   margin-right: 100px;
   grid-row-gap: 20px;
+
 }
 
 .homeImg {
@@ -20,12 +21,13 @@
 }
 
 .homeImg:hover {
-  background-color: #efefef;
+  color: #efefef;
   border-radius: 10px;
   border-style: none;
-  padding: 8px 8px 8px 8px;
+  padding: 10px 10px 10px 10px;
   opacity: 0.5;
   background:rgba(0,0,0,0.6);
+
 
 
 }

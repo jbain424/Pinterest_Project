@@ -1,10 +1,11 @@
 import React from "react";
 import "../../css/User.css";
 import axios from "axios";
-import { Link, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import UserPins from "./UserPins.js";
 import UserProfile from "./UserProfile.js";
 import Boards from "../Boards.js";
+import NavMenu from "../Nav/NavMenu.js"
 
 export class User extends React.Component {
   componentDidMount() {
@@ -19,8 +20,6 @@ export class User extends React.Component {
         this.props.setUser(response.data.data);
       })
       .catch(err => {
-        // debugger
-        console.log('THIS IS THE FAILED USER ');
         console.log(err);
       });
   };
