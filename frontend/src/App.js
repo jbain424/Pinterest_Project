@@ -3,11 +3,10 @@ import { Route, Switch } from "react-router-dom";
 import "./css/NavBar.css";
 import { matchPath } from "react-router";
 
-import {NavBar} from "./components/Nav/NavBar.js";
+import { NavBar } from "./components/Nav/NavBar.js";
 import Home from "./components/Home.js";
-import {User} from "./components/User/User.js";
-
-
+import { User } from "./components/User/User.js";
+import PinProfile from "./components/PinProfile.js";
 
 class App extends Component {
   constructor(props) {
@@ -16,17 +15,14 @@ class App extends Component {
       user: {},
       boards: [],
       isLoggedin: false
-
-
     };
   }
 
-  
-  setUser = (user) => {
+  setUser = user => {
     this.setState({
       user: user
-    })
-  }
+    });
+  };
 
   render() {
     const { user } = this.state;
@@ -34,10 +30,21 @@ class App extends Component {
       <div className="App">
         <NavBar />
         <Switch>
-          <Route exact path="/" component={Home}/>
-          <Route path={"/username/:username"} render={(routeProps)=> {
-              return <User user={this.state.user} {...routeProps} setUser={this.setUser}/>
-            }}/>
+          <Route exact path="/" component={Home} />
+          <Route
+            path={"/username/:id"}
+            render={routeProps => {
+              return (
+                <User
+                  user={this.state.user}
+                  {...routeProps}
+                  setUser={this.setUser}
+                />
+              );
+            }}
+          />
+        <Route path={"/pins/:id"} component={PinProfile} />
+
         </Switch>
       </div>
     );

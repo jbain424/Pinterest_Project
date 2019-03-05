@@ -12,13 +12,16 @@ export class User extends React.Component {
   }
 
   getUser = () => {
+    console.log(this.props);
     axios
-      .get(`/username/${this.props.match.params.username}`)
+      .get(`/username/${this.props.match.params.id}`)
       .then(response => {
+        console.log('SIGLE USER', response);
         this.props.setUser(response.data.data);
       })
       .catch(err => {
         // debugger
+        console.log('THIS IS THE FAILED USER ');
         console.log(err);
       });
   };

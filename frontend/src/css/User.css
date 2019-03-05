@@ -24,7 +24,6 @@
   font-weight: bold;
   color: #efefef;
   padding-left: 8px;
-
 }
 
 .boardsNpins a:link {
@@ -63,10 +62,9 @@
 
 .followers {
   font-family: helvetica neue;
-
   font-size: 14px;
   font-weight: bold;
-  padding-top: 5px;
+
 }
 
 .createPin {

@@ -28,7 +28,7 @@ const getOnePin = (req, res, next) => {
 };
 
 const getAllPinsFromOneUser = (req, res, next) => {
-  let pinId = parseInt(req.params.id);
+  let pinId = parseInt(req.params.body.id);
   db.any('SELECT * FROM pins WHERE user_id=$1', [pinId])
     .then(data => {
       res.status(200)

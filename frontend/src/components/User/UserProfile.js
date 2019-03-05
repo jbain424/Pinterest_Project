@@ -7,6 +7,7 @@ let pencil = require("../../assets/pencil.png");
 let share = require("../../assets/share.png");
 
 export const UserProfile = props => {
+
   return (
     <>
       <div className="userContainer">

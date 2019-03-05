@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import {PinList} from './PinList.js'
+import { PinList } from "./PinList.js";
 import "../css/Home.css";
 import { Link } from "react-router-dom";
 
@@ -25,7 +25,13 @@ class Home extends React.Component {
 
   render() {
     const { pins } = this.state;
-    return <PinList pins={pins} />;
+    return (
+      <div>
+        <PinList pins={pins} />
+
+    
+      </div>
+    );
   }
 }
 export default Home;
