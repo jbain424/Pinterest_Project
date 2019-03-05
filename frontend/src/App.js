@@ -31,6 +31,7 @@ class App extends Component {
         <NavBar />
         <Switch>
           <Route exact path="/" component={Home} />
+
           <Route
             path={"/username/:id"}
             render={routeProps => {
@@ -43,8 +44,7 @@ class App extends Component {
               );
             }}
           />
-        <Route path={"/pins/:id"} component={PinProfile} />
-
+          <Route path={"/pins/:id"} component={PinProfile} />
         </Switch>
       </div>
     );

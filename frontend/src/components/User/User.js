@@ -16,7 +16,6 @@ export class User extends React.Component {
     axios
       .get(`/username/${this.props.match.params.id}`)
       .then(response => {
-        console.log('SIGLE USER', response);
         this.props.setUser(response.data.data);
       })
       .catch(err => {

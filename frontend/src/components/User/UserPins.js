@@ -12,7 +12,7 @@ class UserPins extends React.Component {
   }
 
 componentDidMount() {
-  axios.get(`/pins/${this.props.match.params.username}/pins`)
+  axios.get("/pins/" + this.props.match.params.id + "/pins")
   .then(response => {
     this.setState({
       allUserPins: response.data.data })

@@ -14,7 +14,7 @@ class Boards extends React.Component {
 
   componentDidMount() {
     this.getBoards();
-    this.getPinsFromUsers();
+
   }
 
   getBoards = () => {
@@ -27,20 +27,10 @@ class Boards extends React.Component {
       });
   };
 
-  getPinsFromUsers = () => {
-    axios
-      .get("/pins/" + this.props.match.params.id + "/pins")
-      .then(response => {
-        this.setState({
-          pins: response.data.data
-        });
-      });
-  };
 
   render() {
     const { boards } = this.state;
     const renderBoards = boards.map(board => {
-
       return <h1 key={board.id}>{board.board_name}</h1>;
     });
 
