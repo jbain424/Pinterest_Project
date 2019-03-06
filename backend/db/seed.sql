@@ -38,14 +38,14 @@ INSERT INTO username (username, password_digest, email, profile_pic) VALUES ('jo
 
 INSERT INTO pins (user_id, board_id, pin_name, pin_url, pin_caption) VALUES
 (1, 1, 'Dope Kitchen', 'https://i-h2.pinimg.com/564x/59/bf/b8/59bfb8bc67ae0c2cb522d3772e5f1dd7.jpg?b=t', 'Kitchen Inspiration!'),
-(2, 2, 'Hairstyles', 'https://i-h2.pinimg.com/564x/9d/95/57/9d955762792578a4887b3d4603126bbf.jpg', 'This is a beautiful hairstyle'),
-(3, 3, 'Food', 'https://i.pinimg.com/564x/55/3f/9d/553f9d9db6875e0eb36f8ec1ddc5d042.jpg?b=t', 'Learn to make this yummy looking dish!'),
+(2, 2, 'Hairstyles', 'https://i-h2.pinimg.com/564x/4f/78/13/4f78135bc844f56bf4b29ccc02185fef.jpg', 'This is a beautiful hairstyle'),
+(6, 3, 'Food', 'https://i.pinimg.com/564x/55/3f/9d/553f9d9db6875e0eb36f8ec1ddc5d042.jpg?b=t', 'Learn to make this yummy looking dish!'),
 (4, 4, 'Little Black Dress', 'https://i-h2.pinimg.com/564x/8d/84/ea/8d84ea2f69ed0bba0c504ca0da9b06ba.jpg', 'A little black dress should be an essential item in your closet'),
 (5, 5, 'Laptop', 'https://icdn7.digitaltrends.com/image/applemacbook-review-lid.jpg', 'Apple 2017 MacBook Air'),
-(6, 6, 'Converse', 'https://i-h2.pinimg.com/564x/b9/ea/eb/b9eaebc01a2cd1906ba9edd66b2a5a02.jpg', 'How do you rock your chucks?'),
+(3, 6, 'Converse', 'https://i-h2.pinimg.com/564x/b9/ea/eb/b9eaebc01a2cd1906ba9edd66b2a5a02.jpg', 'How do you rock your chucks?'),
 (7, 1, 'Engagement Ring', 'https://i-h2.pinimg.com/564x/ba/8c/1d/ba8c1d967a300c1644a77855f1478570.jpg', 'My future engagement ring!'),
 (8, 8, 'Oversized Scarf', 'https://i-h2.pinimg.com/564x/dc/6f/63/dc6f635add22f6297bd50fb54df9132c.jpg', 'One way to rock an oversized scarf'),
-(5, 5, 'Marie Kondo Hacks', 'https://i-h2.pinimg.com/564x/de/71/d6/de71d6fdad9dbb3761a533ea9527df9f.jpg', 'Marie Kondo Hacks'),
+(5, 5, 'Marie Kondo Hacks', 'https://i-h2.pinimg.com/564x/60/60/37/606037d29122a002adcec8449c649f3c.jpg', 'Marie Kondo Hacks'),
 (3, 7, 'Free Crochet', 'https://i-h2.pinimg.com/564x/09/d7/dc/09d7dc80a795868bcc9f2df22746ab32.jpg', 'Crochet tips'),
 (1, 2, 'Denim Shirt', 'https://i-h2.pinimg.com/564x/e8/f7/c1/e8f7c15ac82afd7d59ddce290f8d6a8a.jpg', 'Cool way to style a denim shirt...'),
 (5, 3, 'African Print', 'https://i-h2.pinimg.com/564x/e2/46/21/e246213952579df53e109452afff4165.jpg', 'My style, my way!');

@@ -4,7 +4,8 @@ import "../../css/SinglePin.css";
 import { Link } from "react-router-dom";
 import UserPins from "../User/UserPins.js";
 
-
+let fwdArrow = require("../../assets/round-arrow_forward-24px.svg");
+let bckArrow = require("../../assets/round-arrow_back_ios-24px.svg");
 
 class PinProfile extends React.Component {
   constructor(props) {
@@ -38,14 +39,19 @@ class PinProfile extends React.Component {
 
             <div className=" box pinName">{this.state.onePin.pin_name}</div>
 
+            <div className="pinUrl">
+              <Link to={`this.state.onePin.pin_url`} />
+              {"Pinterest.com"}
+            </div>
+
             <div className="box pinCaption">
               {this.state.onePin.pin_caption}
             </div>
 
             <div className="box psAndComs">
+              <p className="pandc"> Photos and Comments </p>
               <Link to={"/pins/"}>Photos</Link>
               <Link to={"/pins/"}>Comments</Link>
-
             </div>
 
             <div className="box pinComment">
@@ -55,7 +61,6 @@ class PinProfile extends React.Component {
             </div>
           </div>
         </div>
-
       </>
     );
   }

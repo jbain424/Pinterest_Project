@@ -1,4 +1,6 @@
-
+#pinBackground {
+  background-color:linear-gradient(#efefef, #fff);
+}
 
 .container {
   border: 100px;
@@ -10,11 +12,39 @@
 .allThings {
   font-family: helvetica neue;
   display: grid;
-  grid-template-columns: 70% 30%;
-  grid-template-rows: 5% 5% 5% 80%;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 70% 30%));
+  grid-template-rows: 5% 5% 5% 12% 73%;
   padding-left: 200px;
   padding-top: 300px;
   padding-right: 200px;
+  border-radius: 10px;
+  grid-column-gap: 2em;
+}
+
+.pinUrl {
+  grid-column: 2;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: #efefef;
+  border-radius: 8px;
+  border-style: none;
+  padding: 7px 150px 7px 150px;
+  color: black;
+  margin: auto;
+
+
+}
+
+.pinUrl a:hover {
+  text-decoration: underline;
+  border-radius: 20px;
+  border-style: none;
+  background-color: #efefef;
+  color: black;
 }
 
 .pinImg {
@@ -23,34 +53,36 @@
   box-sizing: border-box;
 }
 
-/* #whitebox {
-  background-color: white;
-  width: 500px;
-  height: 500px;
-} */
+.pandc {
+  font-family: helvetica neue;
+  font-size: 18px;
+  color: black;
+  padding-left: 5px;
+}
 
 .pinName {
   grid-template-columns: 2 / 1;
   font-size: 24px;
   font-weight: bold;
+  padding-left: 5px;
 }
 
 .pinCaption {
   grid-column: 2 / 2;
+  padding-left: 5px;
 }
-
-
 
 #input {
   width: 300px;
   height: 200px;
   align-content: flex-start;
   border-style: 1px;
-
+  padding-left: 5px;
 }
 .pinComment {
-  grid-column: 2 / 4;
+  grid-column: 2 / 5;
   width: 300px;
+  padding-left: 5px;
 }
 
 .psAndComs {
@@ -61,6 +93,7 @@
   grid-column: 2 / 3;
   font-size: 15px;
   font-weight: bold;
+  height: 20px;
 }
 
 .psAndComs a:link {
@@ -68,7 +101,7 @@
   background-color: white;
   border-radius: 20px;
   border-style: none;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 20px 10px 20px;
   color: black;
 }
 

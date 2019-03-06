@@ -1,11 +1,17 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
+import axios from 'axios'
 
 import { NavBar } from "./components/Nav/NavBar.js";
 import Home from "./components/Home.js";
 import { User } from "./components/User/User.js";
 import PinProfile from "./components/Pins/PinProfile.js";
-import CreatePin  from "./components/Pins/CreatePin.js";
+import CreatePin from "./components/Pins/CreatePin.js";
+
+import SignUp from "./components/SignUp.js";
+// import AuthForm from "./login/AuthForm";
+// import Auth from "./utils/Auth";
+// import PrivateRoute from "./utils/AuthRouting";
 
 import "./css/NavBar.css";
 
@@ -15,7 +21,8 @@ class App extends Component {
     this.state = {
       user: {},
       boards: [],
-      isLoggedin: false
+      isLoggedin: false,
+      username: ""
     };
   }
 
@@ -25,11 +32,45 @@ class App extends Component {
     });
   };
 
+  // componentDidMount() {
+  //   this.checkAuthenticateStatus();
+  // }
+  //
+  // checkAuthenticateStatus = () => {
+  //   axios.get("/users/isLoggedIn").then(user => {
+  //     if (user.data.username === Auth.getToken()) {
+  //       this.setState({
+  //         isLoggedIn: Auth.isUserAuthenticated(),
+  //         username: Auth.getToken()
+  //       });
+  //     } else {
+  //       if (user.data.username) {
+  //         this.logoutUser();
+  //       } else {
+  //         Auth.deauthenticateUser();
+  //       }
+  //     }
+  //   });
+  // };
+  // logoutUser = () => {
+  //   axios
+  //     .post("/users/logout")
+  //     .then(() => {
+  //       Auth.deauthenticateUser();
+  //     })
+  //     .then(() => {
+  //       this.checkAuthenticateStatus();
+  //     });
+  // };
+
   render() {
     const { user } = this.state;
     return (
       <div className="App">
+
         <NavBar />
+        <Route path={"/signup/"} component={SignUp} />
+
         <Switch>
           <Route exact path="/" component={Home} />
 
@@ -47,7 +88,7 @@ class App extends Component {
               );
             }}
           />
-        <Route path={"/new"} component={CreatePin}/>
+          <Route path={"/new"} component={CreatePin} />
         </Switch>
       </div>
     );

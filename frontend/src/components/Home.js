@@ -28,7 +28,7 @@ class Home extends React.Component {
     const { pins, onePin } = this.state;
     return (
       <div>
-        <PinList pins={pins} />
+        <PinList pins={pins} onePin={onePin}/>
         <Link to={"/pins/" + onePin.id}><img src={onePin.pin_url} alt="" className="singlePin"/>
         </Link>
       </div>
