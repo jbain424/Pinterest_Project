@@ -1,3 +1,11 @@
+.body {
+  background-image: url("../assets/backgrounds.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 100px;
+
+}
 .form {
   display: flex;
   flex-direction: column;
@@ -13,9 +21,9 @@
   background-color: #e8f0fd;
   border-radius: 8px;
   position: relative;
-  text-align: center;
+  text-align:left;
   width: 250px;
-
+  font-size: 16px;
   min-height: initial;
   padding-bottom: 12px;
   justify-content: space-between;
@@ -51,6 +59,7 @@
   display: flex;
   justify-content: center;
   font-size: 12px;
+  padding-top: 100px
 }
 
 #button {

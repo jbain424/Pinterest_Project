@@ -1,39 +1,58 @@
+
+
 .homeContainer {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  padding-top: 100px;
+  column-count: 4;
+  -webkit-column-count: 4;
+  column-gap: 0;
+  -webkit-column-gap: 0;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  padding: 5px;
   padding-left: 100px;
-  margin-right: 100px;
-  grid-row-gap: 20px;
-  /* grid-column-gap: 100px */
+  padding-right: 100px;
+  padding-top: 70px;
 }
 
+
 .homeImg {
-  border-radius: 20px 20px 0px 0px;
-  width: 236px;
+  border-radius: 20px;
+  width: 250px;
   height: auto;
   background-color: white;
   border-style: none;
   padding: 10px 10px 10px 10px;
-  z-index: -200px;
   repeat: (auto-fill, minmax(100px, 1fr));
 }
 
-/* .homeImg:hover {
-  color: #efefef;
-  border-radius: 20px 20px 0px 0px;
+.homeImg:hover {
+  background-color: #efefef;
+  border-radius: 20px;
   border-style: none;
-  padding: 10px 10px 0px 10px;
-  opacity: 0.5;
-
-} */
+  padding: 10px 10px 10px 10px;
+}
 
 .pinlistName {
+  display: flex;
+  justify-content: space-between;
   font-family: helvetica neue;
-  /* background-color: white; */
-  border-radius: 0px 0px 20px 20px;
+  padding-bottom: 20px;
+  width: 240px;
+  letter-spacing: -0.4px;
+  font-weight: 500;
+  font-size: 16px;
+  padding-left: 10px;
+  background-color: #fff;
+  padding: 10px 10px 10px 10px;
 }
-/* .hoverbg:hover {
-  background-color: #efefef;
-  border-radius: 20px 20px 20px 20px; */
-/* } */
+
+.pinlistName:hover {
+  display: flex;
+  justify-content: space-between;
+  font-family: helvetica neue;
+  width: 240px;
+  letter-spacing: -0.4px;
+  font-weight: 500;
+  font-size: 16px;
+  padding-left: 10px;
+
+}

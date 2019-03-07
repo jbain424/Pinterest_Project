@@ -1,24 +1,16 @@
-#pinBackground {
-  background-color:linear-gradient(#efefef, #fff);
-}
-
 .container {
-  border: 100px;
-  background-color: white;
-  width: 400px;
-  height: 400px;
+  padding-top: 100px;
 }
 
-.allThings {
+.pinInfo {
   font-family: helvetica neue;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 70% 30%));
+  grid-template-columns: 60% 40%;
   grid-template-rows: 5% 5% 5% 12% 73%;
+  grid-column-gap: 10px;
   padding-left: 200px;
-  padding-top: 300px;
   padding-right: 200px;
-  border-radius: 10px;
-  grid-column-gap: 2em;
+  place-items: start;
 }
 
 .pinUrl {
@@ -35,8 +27,6 @@
   padding: 7px 150px 7px 150px;
   color: black;
   margin: auto;
-
-
 }
 
 .pinUrl a:hover {
@@ -47,10 +37,11 @@
   color: black;
 }
 
-.pinImg {
+.pinImage {
   grid-column: 1;
-  border-radius: 10px;
+  border-radius: 500px;
   box-sizing: border-box;
+  align-content: flex-end;
 }
 
 .pandc {

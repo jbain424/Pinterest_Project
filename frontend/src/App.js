@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
+import axios from 'axios'
 
 import Home from "./components/Home.js";
 import LogIn from "./components/login/LogIn.js";
 import SignUp from "./components/login/SignUp.js";
-// import AuthForm from "./login/AuthForm";
+// import AuthForm from "./components/login/AuthForm";
 // import Auth from "./utils/Auth";
 // import PrivateRoute from "./utils/AuthRouting";
 

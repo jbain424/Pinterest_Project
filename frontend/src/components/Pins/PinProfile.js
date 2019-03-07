@@ -31,36 +31,41 @@ class PinProfile extends React.Component {
   render() {
     return (
       <>
-        <div id="container">
-          <div className="allThings" id="pinBackground">
-            <div className="box pinImg">
-              <img src={this.state.onePin.pin_url} alt="" />
-            </div>
+        <body id="pinBody">
+          <div className="container">
+            <div className="pinInfo">
+              <div className="pinImage">
+                <img src={this.state.onePin.pin_url} alt="" />
+              </div>
 
-            <div className=" box pinName">{this.state.onePin.pin_name}</div>
+              <div className="pinName">{this.state.onePin.pin_name}</div>
 
-            <div className="pinUrl">
-              <Link to={`this.state.onePin.pin_url`} />
-              {"Pinterest.com"}
-            </div>
+              <div className="pinUrl">
+                <Link to={`this.state.onePin.pin_url`} />
+                {"Pinterest.com"}
+              </div>
 
-            <div className="box pinCaption">
-              {this.state.onePin.pin_caption}
-            </div>
+              <div className="pinCaption">{this.state.onePin.pin_caption}</div>
 
-            <div className="box psAndComs">
-              <p className="pandc"> Photos and Comments </p>
-              <Link to={"/pins/"}>Photos</Link>
-              <Link to={"/pins/"}>Comments</Link>
-            </div>
+              <div className="psAndComs">
+                <p className="pandc"> Photos and Comments </p>
+                <Link to={"/pins/"}>Photos</Link>
+                <Link to={"/pins/"}>Comments</Link>
+              </div>
 
-            <div className="box pinComment">
-              <p> Share feedback, ask a question or give a high five!</p>
-              <br />
-              <input id="input" type="text" name="" placeholder="Add Comment" />
+              <div className="pinComment">
+                <p> Share feedback, ask a question or give a high five!</p>
+                <br />
+                <input
+                  id="input"
+                  type="text"
+                  name=""
+                  placeholder="Add Comment"
+                />
+              </div>
             </div>
           </div>
-        </div>
+        </body>
       </>
     );
   }

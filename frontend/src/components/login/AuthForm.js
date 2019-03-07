@@ -2,7 +2,7 @@
 // import axios from "axios";
 // import { withRouter } from "react-router";
 // import { Route, Switch } from "react-router-dom";
-// import Auth from "../utils/Auth";
+// import Auth from "../components/utils/Auth";
 // import Form from "./Form";
 //
 // class AuthForm extends Component {
@@ -57,7 +57,6 @@
 //   render() {
 //     const { username, password } = this.state;
 //     const { isLoggedIn } = this.props;
-//
 //     return (
 //       <Switch>
 //         <Route

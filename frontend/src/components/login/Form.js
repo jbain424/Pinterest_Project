@@ -6,7 +6,7 @@
 //   username,
 //   password,
 //   isLoggedIn,
-//   loginUser,
+//   // loginUser,
 //   registerUser,
 //   handleChange
 // }) => {

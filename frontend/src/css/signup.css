@@ -1,3 +1,5 @@
+
+
 .form {
   display: flex;
   flex-direction: column;
@@ -16,7 +18,8 @@
   background-color: #e8f0fd;
   border-radius: 8px;
   position: relative;
-  text-align: center;
+  text-align: left;
+  font-size: 16px;
   width: 250px;
   margin-top: 20px;
   min-height: initial;

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 let logo = require('../../assets/epingle_logo.png');
 
 
+
 export const NavLogo = () => {
   return (
     <>
@@ -17,6 +18,7 @@ export const NavLogo = () => {
           height="40px"
         />
       </Link>
+    
     </>
   );
 };
