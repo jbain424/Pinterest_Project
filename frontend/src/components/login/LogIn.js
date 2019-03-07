@@ -4,7 +4,7 @@ import Footer from "../Footer.js";
 
 let backsplash = require("../../assets/backsplash.png");
 
-class SignUp extends React.Component {
+class LogIn extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -18,10 +18,10 @@ class SignUp extends React.Component {
   render() {
     return (
       <div>
-        <h1>This is the Sign Up Page</h1>
+      <h1> THis is the Log In Page </h1>
         <div className="whitebox">
           <div classname="form">
-            <form onSubmit={this.props.handleSignup}>
+            <form onSubmit={this.props.handleLogIn}>
               <input id="email" name="name" type="text" placeholder="Email" />
               <input
                 id="password"
@@ -31,7 +31,7 @@ class SignUp extends React.Component {
               />
               <input id="age" name="name" type="text" placeholder="Age" />
               <input id="submit" type="submit" value="signup"/>
-              <button type="button" onClick={this.props.toggleForms}>Already have an account? Log In!</button>
+              <button type="button" onClick={this.props.toggleForms}> Don't Have An Account? Sign Up!</button>
 
             </form>
           </div>
@@ -42,4 +42,4 @@ class SignUp extends React.Component {
   }
 }
 
-export default SignUp;
+export default LogIn;

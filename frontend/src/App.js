@@ -1,14 +1,9 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-import axios from 'axios'
 
-import { NavBar } from "./components/Nav/NavBar.js";
 import Home from "./components/Home.js";
-import { User } from "./components/User/User.js";
-import PinProfile from "./components/Pins/PinProfile.js";
-import CreatePin from "./components/Pins/CreatePin.js";
-
-import SignUp from "./components/SignUp.js";
+import LogIn from "./components/login/LogIn.js";
+import SignUp from "./components/login/SignUp.js";
 // import AuthForm from "./login/AuthForm";
 // import Auth from "./utils/Auth";
 // import PrivateRoute from "./utils/AuthRouting";
@@ -21,10 +16,25 @@ class App extends Component {
     this.state = {
       user: {},
       boards: [],
-      isLoggedin: false,
+      isLoggedIn: false,
+      displayLogInForm: false,
       username: ""
     };
   }
+
+  handleSignup = event => {
+    event.preventDefault();
+    this.setState({
+      isLoggedIn: true
+    });
+  };
+
+  handleLogIn = event => {
+    event.preventDefault();
+    this.setState({
+      isLoggedIn: true
+    });
+  };
 
   setUser = user => {
     this.setState({
@@ -63,33 +73,29 @@ class App extends Component {
   //     });
   // };
 
+  toggleForms = event => {
+    this.setState(prevState => {
+      return {
+         displayLogInForm: !prevState.displayLogInForm };
+    });
+  };
+
   render() {
     const { user } = this.state;
     return (
       <div className="App">
-
-        <NavBar />
-        <Route path={"/signup/"} component={SignUp} />
-
-        <Switch>
-          <Route exact path="/" component={Home} />
-
-          <Route path={"/pins/:id"} component={PinProfile} />
-
-          <Route
-            path={"/username/:id"}
-            render={routeProps => {
-              return (
-                <User
-                  user={this.state.user}
-                  {...routeProps}
-                  setUser={this.setUser}
-                />
-              );
-            }}
+        {this.state.isLoggedIn ? (
+          <Home />
+        ) : this.state.displayLogInForm ? (
+          <LogIn
+            toggleForms={this.toggleForms}
+            handleLogIn={this.handleLogIn}
           />
-          <Route path={"/new"} component={CreatePin} />
-        </Switch>
+        ) : (
+          <SignUp
+            toggleForms={this.toggleForms}        handleSignup={this.handleSignup}
+           />
+        )}
       </div>
     );
   }
