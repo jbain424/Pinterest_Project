@@ -25,19 +25,19 @@ export const UserProfile = props => {
         </span>
 
         <div className="userProfile">
-          {props.user.username}
+          {this.props.user.username}
           <p className="followers"> 10 followers • 5 following </p>
         </div>
 
-        <img id="userPic" src={props.user.profile_pic} alt="" />
+        <img id="userPic" src={this.props.user.profile_pic} alt="" />
 
         <div className="boardsNpins">
           <div className="boards">
-            <Link to={`/username/${props.user.id}/boards/`}>Boards</Link>
-            <Link to={`/username/${props.user.id}/pins/`}>Pins</Link>
+            <Link to={`/username/${this.props.user.id}/boards/`}>Boards</Link>
+            <Link to={`/username/${this.props.user.id}/pins/`}>Pins</Link>
           </div>
 
-          <div className="allUserPins">{props.user.pin_url}</div>
+          <div className="allUserPins">{this.props.user.pin_url}</div>
         </div>
       </div>
     </>

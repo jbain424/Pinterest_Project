@@ -4,12 +4,9 @@
   position: absolute;
   padding-top: 500px;
   z-index: 1;
-  margin-top: 30px;
 }
 
-#email,
-#password,
-#age {
+#password {
   border-style: solid;
   border-width: 1px;
   padding: 8px 14px;
@@ -18,7 +15,7 @@
   position: relative;
   text-align: center;
   width: 250px;
-  margin-top: 20px;
+
   min-height: initial;
   padding-bottom: 12px;
   justify-content: space-between;
@@ -29,12 +26,11 @@
   background-color: red;
   color: white;
   border-width: 1px;
-  padding: 8px 14px;
+  /* padding: 8px 14px; */
   border-radius: 8px;
   position: relative;
   text-align: center;
   width: 280px;
-  margin-top: 20px;
 }
 
 .whitebox {
@@ -43,11 +39,10 @@
   position: relative;
   text-align: center;
   width: 440px;
-  margin: auto;
   min-height: initial;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 2px 10px;
   padding-bottom: 55px;
-  height: 500px;
+  height: 600px;
 }
 
 .footer {
@@ -60,7 +55,6 @@
 
 #button {
   color: #929292;
-  margin-top: 30px;
   border-style: none;
   font-weight: bold;
 }
@@ -71,29 +65,39 @@
   margin-top: 25px;
 }
 
+.logo2 {
+  width: 110px;
+  height: 110px;
+}
+
 .h1 {
   font-family: helvetica neue;
   letter-spacing: -0.4px;
 }
 
-.h3 {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+.h4 {
   font-family: helvetica neue;
-  text-align: center;
-  color: rgb(51, 51, 51);
-  font-size: 16px;
-  font-weight: normal;
-  margin: -15px 0px 20px;
+  letter-spacing: -0.4px;
+  padding-right: 110px;
 }
 
 .terms {
   font-family: helvetica neue;
   letter-spacing: -0.2px;
-  font-size: 12px;
+  font-size: 10px;
   color: #929292;
   padding: 10px 12px 0px 12px;
+}
+
+.p {
+  font-weight: normal;
+}
+
+.email {
+  font-family: helvetica neue;
+  letter-spacing: -0.2px;
+  font-size: 17px;
+  color: #333;
+  font-weight: 400;
+  margin: 0;
 }
