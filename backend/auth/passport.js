@@ -4,7 +4,7 @@ const db = require('../db/queries/index.js')
 
 module.exports = () => {
   passport.serializeUser((user, done) => {
-    done(null, user.username);
+    done(null, {username:username.username, id: username.id, profile_pic:username.profile_pic});
   });
 
   passport.deserializeUser((username, done) => {
@@ -12,7 +12,7 @@ module.exports = () => {
     { username: username
     })
       .then(user => {
-        done(null, user.username);
+        done(null, {username:username.username, id: username.id, profile_pic:username.profile_pic});
       })
       .catch(err => {
         done(err, null);

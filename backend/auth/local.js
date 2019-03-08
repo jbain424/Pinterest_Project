@@ -16,7 +16,7 @@ passport.use(
         if (!helpers.comparePass(password, user.password_digest)) {
           return done(null, false);
         } else {
-          return done(null, user);
+          return done(null, {username:username.username, id: username.id, profile_pic:username.profile_pic});
         }
       })
       .catch(err => {

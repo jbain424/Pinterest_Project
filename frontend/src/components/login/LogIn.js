@@ -2,6 +2,7 @@ import React from "react";
 import "../../css/login.css";
 import Footer from "../Footer.js";
 import axios from 'axios'
+import { withRouter } from 'react-router'
 
 let epingle = require("../../assets/epingle_logo.png");
 
@@ -10,7 +11,7 @@ class LogIn extends React.Component {
     super();
     this.state = {
       email: "",
-      password: ""
+      passwordDigest: ""
     };
   }
 
@@ -24,7 +25,7 @@ class LogIn extends React.Component {
     axios
     .post("/username/login", this.state)
     .then(response => {
-      debugger
+
     })
   }
 
@@ -54,11 +55,11 @@ class LogIn extends React.Component {
                 />
                 <input
                   onChange={this.handleChange}
-                  id="password"
-                  name="password"
-                  type="password"
+                  id="passwordDigest"
+                  name="passwordDigest"
+                  type="passwordDigest"
                   placeholder="Password"
-                  value={this.state.password}
+                  value={this.state.passwordDigest}
                 />
                 <div className="h4">
                   <h4>Forgot your password?</h4>
@@ -82,4 +83,4 @@ class LogIn extends React.Component {
   }
 }
 
-export default LogIn;
+export default withRouter (LogIn);

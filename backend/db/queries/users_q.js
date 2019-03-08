@@ -86,10 +86,11 @@ function createUser(req, res, next) {
   const hash = authHelpers.createHash(req.body.password);
 
   db.none(
-    'INSERT INTO username (username, password_digest, email, profile_pic) VALUES (${username}, ${password_digest}, ${email}, ${profile_pic})',
+    'INSERT INTO username (username, password_digest, email, age profile_pic) VALUES (${username}, ${password_digest}, ${email}, ${age}, ${profile_pic})',
     { username: req.body.username,
       password_digest: hash,
       email: req.body.email,
+      age: req.body.age,
       profile_pic: req.body.profile_pic }
   )
     .then(() => {
@@ -112,7 +113,7 @@ function loginUser(req, res) {
 
 function isLoggedIn(req, res) {
   if (req.user) {
-    res.json({ username: req.user });
+    res.json( req.user );
   } else {
     res.status(401).json({ err: "Nobody Logged In" });
   }
